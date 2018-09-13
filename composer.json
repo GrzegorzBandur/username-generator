@@ -1,0 +1,24 @@
+{
+  "name": "grzegorz-bandur/username-generator",
+  "description": "Username Generator",
+  "type": "package",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Grzegorz Bandur",
+      "email": "bandur.grzegorz@gmail.com"
+    }
+  ], 
+  "require": {
+    "php": ">=7.1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~5.0",
+    "phpunit/phpunit-mock-objects": "~3.0"
+  },
+  "autoload": {
+    "psr-0": {
+      "UsernameGenerator": "src/"
+    }
+  }
+}
