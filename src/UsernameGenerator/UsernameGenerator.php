@@ -31,7 +31,7 @@ class UsernameGenerator
      * @param int $amount
      * @return array
      */
-    public function generate(array $array, int $amount = 5)
+    public function generate(array $array, int $amount = 5): array
     {
         $array = $this->stripingStringService->strip($array);
         return $this->variationsGeneratorService->generate($array, $amount);
