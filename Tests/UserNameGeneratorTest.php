@@ -27,7 +27,7 @@ class UserNameGeneratorTest extends PHPUnit_Framework_TestCase
      */
     public function getSetNoItems()
     {
-        return [[2], [3], [4], [5], [1]];
+        return [[2], [3], [4], [5], [1], [0], [-1]];
     }
 
     /**
@@ -38,11 +38,11 @@ class UserNameGeneratorTest extends PHPUnit_Framework_TestCase
     {
         $userNameGenerator =  new UsernameGenerator();
         $permutation = $userNameGenerator->generate(["one"], $i);
-        $this->assertEquals($i, count($permutation), "Number of items returned don't match set number of items");
+        $this->assertEquals($i > 0 ? $i : 0, count($permutation), "Number of items returned don't match set number of items");
         $permutation = $userNameGenerator->generate(["one", "two"], $i);
-        $this->assertEquals($i, count($permutation), "Number of items returned don't match set number of items");
+        $this->assertEquals($i > 0 ? $i : 0, count($permutation), "Number of items returned don't match set number of items");
         $permutation = $userNameGenerator->generate(["one", "two", "three"], $i);
-        $this->assertEquals($i, count($permutation), "Number of items returned don't match set number of items");
+        $this->assertEquals($i > 0 ? $i : 0, count($permutation), "Number of items returned don't match set number of items");
     }
 
     /**
