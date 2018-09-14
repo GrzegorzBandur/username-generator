@@ -21,6 +21,9 @@ class VariationGeneratorGeneratorService implements VariationGeneratorServiceInt
      */
     public function generate(array $array, int $amount = 5, int $minLength = 3, int $maxLength = 25): array
     {
+        if ($amount < 1 ) {
+            return array();
+        }
         $elements = $this->doGenerate($array, $amount, $minLength, $maxLength);
         if (count($elements) < $amount) {
             while (count($elements) < $amount) {
